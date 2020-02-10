@@ -4,14 +4,10 @@ const auth = require('./authentication.js');
 
 let fork = (creds) => {
 	axios.post('https://api.github.com/repos/FaranOrg/CN-Guided-Practice/forks', {}, {
-			auth: {
-				username: creds.username,
-				password: creds.password
-			}
+		headers: {'Authorization': `token ${creds.access_token}`},
 		})
 		.then((res) => {
-			console.log(`statusCode: ${res.statusCode}`)
-			// TODO(faranjessani): Log to a file
+			console.log(`Created fork: https://github.com/${creds.username}/CN-Guided-Practice.git`);
 		})
 		.catch((error) => {
 			if(error.response.status === 401) {
@@ -25,18 +21,24 @@ let fork = (creds) => {
 		});
 };
 
-let updateRemotes = (creds) => {
-	git.removeRemote('origin');
-	git.addRemote('origin', `https://github.com/${creds.username}/CN-Guided-Practice.git`);
+let updateRemote = (name, url) => {
+	git.getRemotes([], (err, data) => {
+		if (data.map(remote => remote.name).includes(name)) {
+			git.removeRemote(name);
+		}
+		git.addRemote(name, url);
+	});
+};
 
-	git.removeRemote('upstream');
-	git.addRemote('upstream', `https://github.com/FaranOrg/CN-Guided-Practice.git`);
+let updateRemotes = (creds) => {
+	updateRemote('origin', `https://github.com/${creds.username}/CN-Guided-Practice.git`);
+	updateRemote('upstream', `https://github.com/FaranOrg/CN-Guided-Practice.git`);
 };
 
 let main = () => {
 	auth.authAnd((err, creds) => {
 		if(err) {
-			console.log("Please enter your credentials")
+			console.error('Error fetching credentials', err);
 		}
 		else {
 			fork(creds);
