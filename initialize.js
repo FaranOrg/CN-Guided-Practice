@@ -21,12 +21,18 @@ let fork = (creds) => {
 		});
 };
 
-let updateRemotes = (creds) => {
-	git.removeRemote('origin');
-	git.addRemote('origin', `https://github.com/${creds.username}/CN-Guided-Practice.git`);
+let updateRemote = (name, url) => {
+	git.getRemotes([], (err, data) => {
+		if (data.map(remote => remote.name).includes(name)) {
+			git.removeRemote(name);
+		}
+		git.addRemote(name, url);
+	});
+};
 
-	git.removeRemote('upstream');
-	git.addRemote('upstream', `https://github.com/FaranOrg/CN-Guided-Practice.git`);
+let updateRemotes = (creds) => {
+	updateRemote('origin', `https://github.com/${creds.username}/CN-Guided-Practice.git`);
+	updateRemote('upstream', `https://github.com/FaranOrg/CN-Guided-Practice.git`);
 };
 
 let main = () => {
