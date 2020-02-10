@@ -4,7 +4,9 @@ const url = require('url');
 
 const getUsername = (access_token, function_to_execute) => {
 	axios.get('https://api.github.com/user', {
-		headers: {'Authorization': `token ${access_token}`},
+		headers: {
+			'Authorization': `token ${access_token}`
+		},
 	}).then((response) => {
 		if ('login' in response.data) {
 			function_to_execute(null, {
@@ -27,7 +29,9 @@ const getOAuthToken = (code, function_to_execute) => {
 		client_secret: '924289e6a0bc824f5239c990c3dcb8606ba2e7ba',
 		code: code,
 	}, {
-		headers: {'Accept': 'application/json'},
+		headers: {
+			'Accept': 'application/json'
+		},
 	}).then((response) => {
 		if ('access_token' in response.data) {
 			getUsername(response.data['access_token'], function_to_execute);
@@ -47,17 +51,18 @@ exports.authAnd = (function_to_execute) => {
 			server.close();
 			console.error('Error getting callback', error);
 			function_to_execute(error, null);
-		}).on('data', (chunk) => {
-		}).on('end', () => {
+		}).on('data', (chunk) => {}).on('end', () => {
 			response.on('error', (error) => {
 				server.close();
 				console.error('Error getting callback', error);
 				function_to_execute(error, null);
 			});
-			response.writeHead(200, {'Content-Type': 'text/html'})
-			const parsedUrl = url.parse(request.url,true);
+			response.writeHead(200, {
+				'Content-Type': 'text/html'
+			})
+			const parsedUrl = url.parse(request.url, true);
 			if (parsedUrl.pathname === '/authorizationcallback' &&
-					'code' in parsedUrl.query) {
+				'code' in parsedUrl.query) {
 				response.end('Success! Close this tab and return to your terminal.');
 				server.close();
 				getOAuthToken(parsedUrl.query['code'], function_to_execute);
@@ -70,6 +75,6 @@ exports.authAnd = (function_to_execute) => {
 
 	console.log('Open the following URL in a brower:');
 	console.log(
-			'https://github.com/login/oauth/authorize?client_id=bd6a342322ba0ce2601a&scope=public_repo');
+		'https://github.com/login/oauth/authorize?client_id=bd6a342322ba0ce2601a&scope=public_repo');
 	console.log('Waiting for callback...');
 }
