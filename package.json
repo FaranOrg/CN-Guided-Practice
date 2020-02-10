@@ -1,0 +1,24 @@
+{
+  "name": "cn-guided-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "initialize.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faranjessani/CN-Guided-Practice.git"
+  },
+  "author": "Faran Jessani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faranjessani/CN-Guided-Practice/issues"
+  },
+  "homepage": "https://github.com/faranjessani/CN-Guided-Practice#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "prompt": "^1.0.0",
+    "simple-git": "^1.131.0"
+  }
+}
