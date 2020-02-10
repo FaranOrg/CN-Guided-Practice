@@ -4,14 +4,10 @@ const auth = require('./authentication.js');
 
 let fork = (creds) => {
 	axios.post('https://api.github.com/repos/FaranOrg/CN-Guided-Practice/forks', {}, {
-			auth: {
-				username: creds.username,
-				password: creds.password
-			}
+		headers: {'Authorization': `token ${creds.access_token}`},
 		})
 		.then((res) => {
-			console.log(`statusCode: ${res.statusCode}`)
-			// TODO(faranjessani): Log to a file
+			console.log(`Created fork: https://github.com/${creds.username}/CN-Guided-Practice.git`);
 		})
 		.catch((error) => {
 			if(error.response.status === 401) {
@@ -36,7 +32,7 @@ let updateRemotes = (creds) => {
 let main = () => {
 	auth.authAnd((err, creds) => {
 		if(err) {
-			console.log("Please enter your credentials")
+			console.error('Error fetching credentials', err);
 		}
 		else {
 			fork(creds);
