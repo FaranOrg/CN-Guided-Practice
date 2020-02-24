@@ -28,11 +28,11 @@ let main = () => {
 				.raw(["checkout",
 					"-b",
 					result.branch,
-					"--track",
-					`upstream/${result.branch}`
+					`upstream/${result.branch}`,
+				        "--no-track"
 				]);
+			console.log(`Click here for instructions: https://github.com/FaranOrg/CN-Guided-Practice/blob/${result.branch}/README.md`);
 		});
-
 	});
 };
 
