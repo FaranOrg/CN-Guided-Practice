@@ -1,4 +1,11 @@
-Welcome to the CN Guided Practice repository.
+# How to switch to a different Guided Practice
+
+1. Run `node scripts/guided-practice.js`
+2. Type in the name of the guided practice.
+   1. If you are unsure of the name, ask your instructor or check the session agenda.
+3. Read the `README` file for the guided practice
+
+------
 
 # First time here? Do the following.
 
@@ -16,11 +23,3 @@ Welcome to the CN Guided Practice repository.
 3. Run `npm install`
 4. Run `node scripts/initialize.js`
 5. Follow the instructions
-
-# How to switch to a different Guided Practice
-
-1. Run `node scripts/guided-practice.js`
-2. Type in the name of the guided practice.
-   1. If you are unsure of the name, ask your instructor or check the session agenda.
-3. Read the `README` file for the guided practice
-4. Follow the instructions contained within
