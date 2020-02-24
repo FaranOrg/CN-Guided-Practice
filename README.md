@@ -7,8 +7,12 @@
 3. Open Visual Studio Code to this folder
 
 ## The assignment - what you need to do
+"Read the code and execute it. Currently, the clock will print 'Hello, world!' Make it say hello to you instead. For example, 'Hello, Faran!'"
 
-1. Make the clock say hello to you instead of the world.
+1. Read the code and execute it.
+   1. Currently, the clock will print 'Hello, world!'
+1. Make the clock say hello to you instead.
+   1. For example, my clock will say 'Hello, Faran!'
 
 ------
 
