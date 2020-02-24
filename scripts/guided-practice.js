@@ -29,7 +29,7 @@ let main = () => {
 					"-b",
 					result.branch,
 					"--track",
-					`origin/${result.branch}`
+					`upstream/${result.branch}`
 				]);
 		});
 
