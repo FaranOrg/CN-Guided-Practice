@@ -18,6 +18,14 @@
 5. Pass the data in your App component’s state `(this.state)` down to your Giphy component so it can display an `<img>` element on the page.
 6. Create a click handler on your Giphy component to select a new, random GIF from the API data.
 
+## Do this after
+
+1. Run `git commit -m "Updated the application to search Giphy for dog gifs and display them."`
+   1. Feel free to get creative with this message. It's for your benefit.
+1. Run `git push`
+
+If anything goes wrong here, please ask for assistance.
+
 ------
 
 # First time here? Do the following.
