@@ -30,7 +30,12 @@ let main = () => {
 					result.branch,
 					`upstream/${result.branch}`,
 				        "--no-track"
-				]);
+				])
+				.raw(["push",
+				      "-u",
+				      "origin",
+				      `${result.branch}`
+			      ]);
 			console.log(`Click here for instructions: https://github.com/FaranOrg/CN-Guided-Practice/blob/${result.branch}/README.md`);
 		});
 	});
