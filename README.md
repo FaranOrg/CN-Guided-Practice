@@ -13,6 +13,13 @@
 1. Make the clock say hello to you instead.
    1. For example, my clock will say 'Hello, Faran!'
 
+## Do this after
+
+1. Run `git commit -m "Made the clock say hello to me"`
+1. Run `git push`
+
+If anything goes wrong here, please ask for assistance.
+
 ------
 
 # First time here? Do the following.
