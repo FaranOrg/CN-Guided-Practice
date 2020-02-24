@@ -6,7 +6,7 @@ Welcome to the CN Guided Practice repository.
 
 1. Open a `terminal`
 2. Type `npm --version`
-   1. If it prints a number, skip down to [Then do this](Then do this)
+   1. If it prints a number, skip down to [Then do this](#Then-do-this)
    2. If it returns an error, install NodeJs version 10 from here ([Windows](https://nodejs.org/dist/latest-v10.x/node-v10.19.0-x64.msi), [Mac](https://nodejs.org/dist/latest-v10.x/node-v10.19.0.pkg), [Linux](https://nodejs.org/dist/latest-v10.x/node-v10.19.0-linux-x64.tar.gz))
 
 ## Then do this
