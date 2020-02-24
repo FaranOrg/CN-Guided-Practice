@@ -14,7 +14,7 @@ Welcome to the CN Guided Practice repository.
 1. Clone this repository onto your computer
 2. Navigate to your cloned directory
 3. Run `npm install`
-4. Run `npm scripts/initialize.js`
+4. Run `node scripts/initialize.js`
 5. Follow the instructions
 
 # How to switch to a different Guided Practice
