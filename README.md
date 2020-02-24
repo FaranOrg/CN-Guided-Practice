@@ -15,15 +15,6 @@
 
 ------
 
-# How to switch to a different Guided Practice
-
-1. Run `node scripts/guided-practice.js`
-2. Type in the name of the guided practice.
-   1. If you are unsure of the name, ask your instructor or check the session agenda.
-3. Read the `README` file for the guided practice
-
-------
-
 # First time here? Do the following.
 
 ## Ensure you've got the prerequisites
@@ -35,8 +26,24 @@
 
 ## Then do this
 
+1. DO NOT FORK
 1. Clone this repository onto your computer
-2. Navigate to your cloned directory
+   1. Click the green 'Clone or Download' button
+   1. Copy the link
+   1. Open a Terminal
+   1. Navigate (using `cd`) to a directory where you keep your code
+      1. ie. If you keep your code in the `Dev` directory, type `cd Dev`
+   1. Type `git clone` followed by the link you copied
+2. Navigate to your cloned directory using `cd CN-Guided-Practice`
 3. Run `npm install`
 4. Run `node scripts/initialize.js`
 5. Follow the instructions
+
+------
+
+# How to switch to a different Guided Practice
+
+1. Run `node scripts/guided-practice.js`
+2. Type in the name of the guided practice.
+   1. If you are unsure of the name, ask your instructor or check the session agenda.
+3. Read the `README` file for the guided practice
