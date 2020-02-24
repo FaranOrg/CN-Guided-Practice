@@ -18,7 +18,8 @@
 2. Type in the name of the guided practice.
    1. If you are unsure of the name, ask your instructor or check the session agenda.
 3. Read the `README` file for the guided practice
-4. Follow the instructions contained within
+
+------
 
 # First time here? Do the following.
 
