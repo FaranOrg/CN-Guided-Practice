@@ -31,8 +31,8 @@ let main = () => {
 					"--track",
 					`upstream/${result.branch}`
 				]);
+			console.log(`Click here for instructions: https://github.com/FaranOrg/CN-Guided-Practice/blob/${result.branch}/README.md`);
 		});
-
 	});
 };
 
