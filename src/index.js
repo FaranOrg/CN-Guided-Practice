@@ -7,22 +7,34 @@ let apiKey = ""; // <-- add the API key from your slides
 let searchTerm = ""; // <-- add a search term
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     /**
      * This is where your data starts and needs
      * to low down through your other components.
      */
     this.state = {
-      imageUrl: null
+      imageUrl: null,
+      error: false,
+      errorMessage: '',
     };
-    this.fetchGIF = fetchGIF.bind(this);
-    this.fetchGIF(apiKey, searchTerm);
+  }
+
+  componentDidMount() {
+    fetchGIF(apiKey, searchTerm)
+      .then((imageUrl) => {
+        this.setState({imageUrl})
+      })
+      .catch((error) => {
+        this.setState({error: true, errorMessage: error.message})
+      })
   }
 
   render() {
-    if (this.state.imageUrl || !apiKey || !searchTerm) {
-      return <Giphy data={this.state.imageUrl} />;
+    if (this.state.error) {
+      return <div>{this.state.errorMessage}</div>
+    } else if (this.state.imageUrl) {
+      return <Giphy imageUrl={this.state.imageUrl}/>;
     } else {
       return null;
     }
@@ -34,14 +46,14 @@ class App extends React.Component {
  * Send the data down from the parent App component!
  */
 function Giphy() {
-  return <div>Where's my data? :(</div>;
+  return <div>It looks like we have successfully loaded a gif... But why is not showing up here?! :)</div>;
 }
 
 /*
 class Giphy extends React.Component {
   render() {
     return (
-     <div>Where's my data? :(</div>;
+     <div>It looks like we have successfully loaded a gif... But why is not showing up here?! :)</div>;
     );
   }
 }
