@@ -8,15 +8,17 @@
 
 ## The assignment - what you need to do
 
-1. Read through the starter code
-2. Answer these questions
-   1. What are the components in this app?
-   2. How will you pass state from parent to child components?
-   3. How is this similar to the Trivia app?
-3. Store this string in the `apiKey` variable: `eCLr0aYcPt2PJvPUPgcqR5PZP9eRd8HC`
-4. Store a string like `dogs` in the `searchTerm` variable.
-5. Pass the data in your App component’s state `(this.state)` down to your Giphy component so it can display an `<img>` element on the page.
-6. Create a click handler on your Giphy component to select a new, random GIF from the API data.
+1. Before changing any code, answer these questions.
+   1. What is the name of the root component?
+   2. What are the names of the root's child components?
+
+2. The starter code contains 3 syntax errors that prevent the code from building.  Use the browser to fix an error.  We'll do the first one together.
+
+3. Now that your webpage builds, there are some other errors!  Test out the code by using the page.
+There are 3 problems with the page's functionality.  Work with a partner to find the 3 problems.
+
+4. Take 5 minutes to fix the 3 problems.  If you fix all 3, HOORAY!!!!!
+
 
 ## Do this after
 
