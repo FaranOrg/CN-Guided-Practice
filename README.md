@@ -1,4 +1,4 @@
-# 3.5 Guided Practice
+# 3.6 Debugging Practice
 
 ## Do this first
 
