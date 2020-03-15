@@ -8,17 +8,15 @@
 
 ## The assignment - what you need to do
 
-1. Before changing any code, answer these questions.
-   1. What is the name of the root component?
-   2. What are the names of the root's child components?
+1. The goal of this guided practice is to use the Array.map() function to create React components.  
 
-2. The starter code contains 3 syntax errors that prevent the code from building.  Use the browser to fix an error.  We'll do the first one together.
+2. The training wheels are off for this one!  In the data.js file, you'll find an array containing information for instagram posts.  Each "post" contains an image, and then a list of comments.  Each "comment" object contains a "user" and a "comment".
 
-3. Now that your webpage builds, there are some other errors!  Test out the code by using the page.
-There are 3 problems with the page's functionality.  Work with a partner to find the 3 problems.
+3. You will need to create two new components from scratch: a "Post" component, and a "Comment" component to display the data from data.js.  It should look like a cheap instagram clone.  Check out this image from my solution.
 
-4. Take 5 minutes to fix the 3 problems.  If you fix all 3, HOORAY!!!!!
+4.  Here's what my solution looks like (https://imgur.com/a/9XmKWs3).  
 
+5.  This will be tricky!  You'll be working mostly independently, and will have to debug on your own.  Make sure to start with a working page, add a small change, SAVE, and check if your change worked.  Finding an error after a small change is MUCH easier than after a large change.
 
 ## Do this after
 
