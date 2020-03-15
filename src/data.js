@@ -1,6 +1,6 @@
 export const data = [
     {
-        image: "https://i.imgur.com/1yiHHD6.gifv",
+        image: "https://photos.puppyspot.com/0/listing/601130/photo/4955303_large-resize.jpg",
         comments: [
             {
                 user: "Mr. Fluff",
@@ -13,15 +13,11 @@ export const data = [
         ],
     },
     {
-        image: "https://i.imgur.com/tljmFd3.gifv",
+        image: "https://preview.redd.it/x1w2v2r6g5m21.jpg?width=640&crop=smart&auto=webp&s=5f774760746c179b5dca5c29c2b77769a06d24d8",
         comments: [
             {
-                user: "FizzBuzz",
-                comment: "It walks like a t-rex",
-            },
-            {
                 user: "Tottaly not a cat",
-                comment: "Whateer, it's not that cute.",
+                comment: "My favorite!",
             },
         ],
     },
