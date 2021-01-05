@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/faranjessani/CN-Guided-Practice#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "prompt": "^1.0.0",
     "simple-git": "^1.131.0"
   }
