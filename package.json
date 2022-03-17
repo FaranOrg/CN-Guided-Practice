@@ -19,6 +19,6 @@
   "dependencies": {
     "axios": "^0.19.2",
     "prompt": "^1.0.0",
-    "simple-git": "^1.131.0"
+    "simple-git": "^3.3.0"
   }
 }
